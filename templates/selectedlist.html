@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1">Estado</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2">Município</label>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<p>Selecione o Municipio:</p>
+<form class="form-inline" method="POST" action="{{ url_for('test') }}">
+<div class="form-group">
+		<select name="mun_select" class="selectpicker form-control">
+		{% for mun in lista_municipios %}
+		<option value="{{ mun }}">{{ mun }}</option>
+		{% endfor %}
+		</select>
+    <button type="submit" class="btn btn-primary mt-3">Buscar</button>
+</div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+>>#table-wrapper {
+  max-height: 400px;
+  width: auto;
+  overflow: auto;
+
+}
+
+>>thead {position: -webkit-sticky; position: sticky; top: 0px; z-index: 100;}
+
+>>>#table-wrapper td, th {
+    border: 1px solid #dddddd;text-align:right;padding: 2px;}
+
+>>>>tr:nth-child(even) {background-color: #f2f2f2f2;}
+
+
+.card-deck .card-header{text-align:center; font-family: arial, sans-serif;
+            font-size:12px;}
+
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: .5rem;
+}
+
+.card-deck .card-title{color:#616A6B;text-align:center;}
+
